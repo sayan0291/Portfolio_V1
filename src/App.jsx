@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Github, Linkedin, X, ExternalLink, GitFork, Sun, Moon } from "lucide-react";
+import Reveal from "./components/animation/Reveal";
+import { projects } from "./data/projectData";
+import { SweepAnimation } from "./components/animation/SweepAnimation";
 
-
-// Fill this in with your own stack — order roughly by how much you use them.
 const techStack = ["React", "Tailwind CSS", "JavaScript", "Node.js", "Git"];
 
 const theme = {
@@ -37,20 +38,6 @@ const headerItem = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-// Reveals children once the wrapped element scrolls into view.
-function Reveal({ className = "", children }) {
-  return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 14 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 export default function App() {
   const [mode, setMode] = useState("light");
@@ -71,13 +58,7 @@ export default function App() {
   return (
     <div className={`min-h-screen ${t.bg} ${t.text} transition-colors duration-300 font-sans relative overflow-hidden`}>
       {/* curtain sweep overlay */}
-      <motion.div
-        aria-hidden="true"
-        className={`fixed inset-0 z-50 pointer-events-none ${t.accentBg}`}
-        style={{ originX: curtain === "retreat" ? 1 : 0 }}
-        animate={{ scaleX: curtain === "sweep" ? 1 : 0 }}
-        transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
-      />
+      <SweepAnimation t={t} curtain={curtain} />
 
       <div className="max-w-2xl mx-auto px-6 py-16">
         <motion.header

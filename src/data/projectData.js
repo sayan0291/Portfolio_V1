@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     name: "Online Code Editor",
     tag: "HTML",
