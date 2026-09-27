@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import Reveal from "./components/animation/Reveal";
+import Reveal from "../components/animation/Reveal.jsx";
 
 const techStack = ["React", "Tailwind CSS", "JavaScript", "Node.js", "Git"];
 
