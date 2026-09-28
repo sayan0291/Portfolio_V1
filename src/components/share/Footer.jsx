@@ -1,5 +1,6 @@
 import { motion } from "motion/react"
 import { Github,Linkedin } from "lucide-react"
+import { Icon } from "../common/Icon"
 
 export const Footer = ({t}) => (
     <motion.footer
@@ -8,21 +9,11 @@ export const Footer = ({t}) => (
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <a
-            href="https://github.com/sayan0291"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`font-mono text-sm flex items-center gap-1.5 ${t.dim} hover:opacity-70 hover:translate-x-1 transition-all duration-200`}
-          >
+          <Icon link="https://github.com/sayan0291" t={t} >
             <Github size={14} /> GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/sayan-ghanta-b4376035a/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`font-mono text-sm flex items-center gap-1.5 ${t.dim} hover:opacity-70 hover:translate-x-1 transition-all duration-200`}
-          >
+          </Icon>
+          <Icon link="https://www.linkedin.com/in/sayan-ghanta-b4376035a/" t={t} >
             <Linkedin size={14} /> LinkedIn
-          </a>
+          </Icon>
         </motion.footer>
 )

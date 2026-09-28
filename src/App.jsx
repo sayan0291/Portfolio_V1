@@ -116,7 +116,7 @@ export default function App() {
                   </motion.span>
                 ) : (
                   <motion.span
-                    key="sun"
+                    key="sun" 
                     className="absolute flex items-center justify-center"
                     initial={{ opacity: 0, scale: 0.5, rotate: 90 }}
                     animate={{ opacity: 1, scale: 1, rotate: 0 }}
