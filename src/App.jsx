@@ -8,6 +8,7 @@ import { Card } from "./components/common/Card";
 import { TechStack } from "./pages/TechStack";
 import { projects } from "./data/projectData";
 import { Project } from "./pages/Projects";
+import { ToggleButton } from "./components/animation/ToggleButton";
 
 
 const theme = {
@@ -104,27 +105,13 @@ export default function App() {
             >
               <AnimatePresence initial={false} mode="wait">
                 {isDark ? (
-                  <motion.span
-                    key="moon"
-                    className="absolute flex items-center justify-center"
-                    initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    exit={{ opacity: 0, scale: 0.5, rotate: 90 }}
-                    transition={{ duration: 0.2 }}
-                  >
+                  <ToggleButton>
                     <Moon size={11} className="text-zinc-950" />
-                  </motion.span>
+                  </ToggleButton>
                 ) : (
-                  <motion.span
-                    key="sun" 
-                    className="absolute flex items-center justify-center"
-                    initial={{ opacity: 0, scale: 0.5, rotate: 90 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    exit={{ opacity: 0, scale: 0.5, rotate: -90 }}
-                    transition={{ duration: 0.2 }}
-                  >
+                  <ToggleButton>
                     <Sun size={11} className="text-white" />
-                  </motion.span>
+                  </ToggleButton>
                 )}
               </AnimatePresence>
             </motion.span>

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-function Reveal({ className = "", children }) {
+export const  Reveal = ({ className = "", children }) => {
   return (
     <motion.div
       className={className}
@@ -13,5 +13,3 @@ function Reveal({ className = "", children }) {
     </motion.div>
   );
 }
-
-export default Reveal;
