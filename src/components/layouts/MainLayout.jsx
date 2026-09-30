@@ -15,12 +15,12 @@ export const MainLayouts = () => {
                 <SweepAnimation t={t} curtain={curtain} />
 
                 <div className="max-w-2xl mx-auto px-6 py-16">
-                    <Header/>
+                    <Header />
 
-                    <Project t={t} setSelected={setSelected} />
+                    <Project />
 
-                    <TechStack t={t} />
-                    <Footer t={t} />
+                    <TechStack />
+                    <Footer />
                     
                 </div>
 

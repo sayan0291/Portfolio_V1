@@ -1,7 +1,13 @@
 import { AnimatePresence,motion } from "motion/react"
 import { ExternalLink,GitFork,X } from "lucide-react"
+import { useTheme } from "../../hooks/useTheme"
+import { projects } from "../../data/projectData"
 
-export const Card = ({selected,setSelected,t,projects}) => (
+export const Card = () => {
+
+  const { selected,setSelected,t } = useTheme()
+
+  return (
     <AnimatePresence>
         {selected !== null && (
           <motion.div
@@ -57,3 +63,4 @@ export const Card = ({selected,setSelected,t,projects}) => (
         )}
       </AnimatePresence>
 )
+}
