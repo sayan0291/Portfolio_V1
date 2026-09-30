@@ -1,7 +1,12 @@
 import { motion,AnimatePresence } from "motion/react"
+import { ToggleButton } from "../../components"
+import { useTheme } from "../../hooks/useTheme"
+import { Moon,Sun } from "lucide-react"
 
 
 export const Header = () => {
+
+    const { headerContainer,headerItem,t,isDark,toggleTheme } = useTheme()
 
     return(
         <>

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { projects } from "../data/projectData.js";
-import Reveal from "../components/animation/Reveal.jsx";
+import { Reveal } from "../components";
 import { GitFork } from "lucide-react";
 
 export const Project = ({t,setSelected}) => (
