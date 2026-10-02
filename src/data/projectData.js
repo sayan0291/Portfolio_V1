@@ -13,7 +13,7 @@ export const projects = [
     name: "Movie Suggest",
     tag: "JavaScript",
     fork: false,
-    image: "/47.jpg",
+    image: "/movie.jpg",
     summary: "An app that recommends movies to watch.",
     details:
       "A small recommendation app that suggests movies based on your input. Focused on a simple, fast interface for browsing suggestions without the clutter of a full streaming platform.",
@@ -23,7 +23,7 @@ export const projects = [
     name: "College Project",
     tag: "JavaScript",
     fork: false,
-    image: "/47.jpg",
+    image: "/14034.jpg",
     summary: "Coursework project built during college.",
     details:
       "A coursework assignment built to practice core JavaScript fundamentals and project structure as part of the college curriculum.",
@@ -33,7 +33,7 @@ export const projects = [
     name: "Maggi",
     tag: "HTML",
     fork: false,
-    image: "/47.jpg",
+    image: "/82624.jpg",
     summary: "A small HTML project.",
     details:
       "A compact HTML-based project used to practice page structure, layout, and styling fundamentals.",
